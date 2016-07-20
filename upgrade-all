@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# APT
+sudo apt-get update
+sudo apt-get upgrade
+
+# PIP
+pip list --outdated | cut -d ' ' -f1 | sudo xargs -n1 pip install -U
+
+# Composer
+composer selfupdate
